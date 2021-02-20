@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Introdução JQuery</title>
+        <script src="./script/jquery-3.5.1.min.js"></script>
+        <style>
+           p{
+               font-size: 25px;
+           }
+        </style>
+        <script>
+            $(document).ready(function(){
+                //mostrarMensagem();
+                $("#a1").click(function(){
+                    $("#p1").html("Hello Word!");
+                });
+                $("#a2").click(function(){
+                    $("#p1").css({"color" : "red"});
+                });
+                $("#copiar").click(function(){
+                    // colocar o valor de txt1 em txt2
+                    // var texto = $("#txt1").val();
+                    // $("#text2").val(texto);
+                    $("#txt2").val($("#txt1").val());
+                });
+            });
+            function mostrarMensagem (){
+                alert("Hello Word");
+            }
+        </script>
+    </head>
+    <body>
+        <h1>JQuery</h1>
+        <a id="a1" href="#">Alterar um parágrafo</a>
+        <a id="a2" href="#">Alterar cor do parágrafo</a>
+        <p id="p1">Essa linha será alterar</p>
+        Caixa1<input type="text" id="txt1" /> <br>
+        Caixa2<input type="text" id="txt2" /> <br>
+        <button id="copiar">Copiar</button>
+    </body>
+</html

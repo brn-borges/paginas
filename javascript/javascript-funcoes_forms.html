@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Introdução JavaScript</title>
+        <style>
+           
+           
+        </style>
+        <script>
+            //alert("Teste")
+           function primeiraFuncao(){
+                var nome = prompt("Informe o seu nome.");
+                document.write("<h5>Nome: " + nome + "</h5>");
+           }
+           //primeiraFuncao();
+           function validar(){
+                if(document.dados.txtNome.value == ""){
+                    alert("Por favor informe um nome na caixa.");
+                }else if(document.dados.optOpcao[0].checked != true && 
+                document.dados.optOpcao[1].checked != true){
+                    alert("Selecione uma das opções Sim/Não.");
+                }else if(document.dados.cmbEstado.value == "Selecione"){
+                    alert("Selecione um Estado da lista.")
+                }else{
+                document.dados.submit();
+                }
+           }
+
+        </script>
+    </head>
+    <body>
+        <h1>JavaScript - Funções e Formulários</h1>
+        <!--
+        <button onclick="primeiraFuncao()">Teste</button>
+        -->
+        <form name="dados">
+            <p>
+                Nome:
+                <input type="text" name="txtNome" id="txtNome"/>
+            </p>
+            <p>
+                Opção: <br>
+                <input type="radio" name="optOpcao" value="SIM" /> Sim 
+                <input type="radio" name="optOpcao" value="NAO" /> Não
+            </p>
+            <p>
+                Estado: <br>
+                <select name="cmbEstado" id="cmbEstado">
+                    <option>Selecione</option>
+                    <option>SP</option>
+                    <option>MG</option>
+                    <option>RJ</option>
+                </select>
+            </p>
+            <p>
+                Periodo: <br>
+                Manhã: <input type="checkbox" name="cmbManha" value="M" />
+                Tarde: <input type="checkbox" name="cmbTarde" value="T" />
+            </p>
+            <p>
+                <input type="button" name="Enviar" value="Enviar" onclick="validar()" />
+            </p>
+        </form>
+    </body>
+</html

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Introdução JavaScript</title>
+        <style>
+            body{
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                background-color: #F5F5F5;
+            }
+            span{
+                margin-left: 15px;
+            }
+            input, select{
+                border: 2px solid #B0E0E6;
+            }
+            .cl-titulo, .cl-dados{
+                background-color: #E0FFFF;
+                width: 30%;
+                margin-left: 33%;
+                border-bottom: 5px solid #B0E0E6;
+                border-radius: 10px;
+                padding-top: 15px;
+                padding-bottom: 10px;
+                margin-top: 10px;
+            }
+            .cl-botao{
+                margin-left: 70%;
+                margin-top: 5%;  
+            }
+            .cl-ajustes{
+                background-color:#B0E0E6;
+                border-collapse: collapse;
+                border: 2px solid darkcyan;
+                border-radius: 5px;
+                width: 100px;
+                height: 30px;
+            }
+            .cl-ajustes:hover{
+                cursor: pointer;
+                background-color:darkcyan;
+                border-collapse: collapse;
+                border: 2px solid #B0E0E6;
+                border-radius: 5px;
+                width: 100px;
+                height: 30px; 
+            }
+            .cl-texto, input, select{
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                font-weight: bold;
+                text-align: center;
+            }
+            .cl-dados{
+                height: 450px;
+            }
+            .cl-info{
+                width: 90%;
+                margin-left: 5%;
+                margin-top: 5%;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                border-bottom: 2px solid #F08080;
+                border-radius: 5px;
+                color: blue;
+                font-weight: bold; 
+            }
+            .cl-tam1{
+                width: 10%;
+            }
+            .cl-tam2{
+                width: 50%;
+            }
+            .cl-tam3{
+                width: 10%;
+            }
+            .cl-tam4{
+                width: 10%;
+            }
+            .cl-tam5{
+                width: 25%;
+            }
+            .cl-tam6{
+                width: 15%;
+            }
+        </style>
+        <script>
+            function validar(){
+                if(document.dados.txtCod.value == ""){
+                    alert("Por favor informe o código.");
+                }else if(document.dados.txtProd.value == ""){
+                    alert("Por favor informe o produto.");
+                }else if(document.dados.cmbUnid.value == "Selecione"){
+                    alert("Selecione uma unidade.");
+                }else if(document.dados.txtEstoque.value == ""){
+                    alert("Insira a quantidade maior que 0.")
+                }else if(document.dados.txtValor.value == ""){
+                    alert("Insira o valor unitario maior que R$ 0.");
+                }else if(document.dados.txtLucro.value == ""){
+                    alert("Insira o lucro.")
+                }else{
+                document.dados.submit();
+                }
+           }
+        </script>
+    </head>
+    <body>
+        <h2>JavaScript - Formulário</h2>
+        <div class="cl-titulo">
+            <div class="cl-texto">
+                <p>Cadastro de Produtos</p>
+            </div>
+        </div>
+        <form name="dados">
+        <div class="cl-dados">
+            <div id="" class="cl-info">
+                <span>Cód. Ref: <input type="text" name="txtCod"  id="txtCod" class="cl-tam1"/></span>
+            </div>
+            <div id="" class="cl-info">
+                <span>Produto: <input type="text" name="txtProd" id="txtProd" class="cl-tam2"/></span>
+            </div>
+            <div id="" class="cl-info">
+                <span>Unid.: 
+                    <select name="cmbUnid" id="cmbUnid">
+                        <option>Selecione</option>
+                        <option>Peça</option>
+                        <option>Caixa</option>
+                        <option>Litro</option>
+                        <option>Metro</option>
+                    </select>
+                </span>
+            </div>
+            <div id="" class="cl-info">
+                <span>Estoque: <input type="number" name="txtEstoque" id="txtEstoque" class="cl-tam4"/></span>
+            </div>
+            <div id="" class="cl-info">
+                <span>Valor Unit.(R$): <input type="text" name="txtValor" id="txtValor" class="cl-tam5"/></span>
+            </div>
+            <div id="" class="cl-info">
+                <span>Lucro(%): <input type="text" name="txtLucro" id="txtLucro" class="cl-tam6"/></span>
+            </div>
+            <div class="cl-botao">
+                <input type="button" onclick="validar()" class="cl-ajustes" name="Salvar" value="Salvar">
+            </div>
+        </div>
+    </form>
+    </body>
+</html

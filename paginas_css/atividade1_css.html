@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Atividade 1 - CSS</title>
+
+        <style>
+           table{
+               border-right: 2px solid  black;
+               border-left: 2px solid  black;
+               width: 50%;
+               border-collapse: collapse;
+           }
+           .cl-table1{
+               border-top: 2px solid  black;
+           }
+           .cl-table2{
+               border-bottom: 2px solid  black;
+           }
+          
+           .cl-alinha-centro{
+               text-align: center;
+           }
+           .cl-alinha-direita{
+               text-align: right;
+           }
+           .cl-cabecalho{
+               background-color:#2F4F4F;
+               color: white; 
+           }
+           tr{
+               height: 35px; ;
+           }
+           .cl-tr{
+               border-bottom: 2px solid  black;
+           }
+           .cl-tr-cor{
+               background-color:#E0FFFF;
+           }
+           .cl-troca-cor:hover{
+                background-color:#F0FFF0;
+                color:#32CD32;
+                cursor: pointer;
+            }
+            td{
+                padding: 5px;
+            }
+            .cl-td{
+                width: 70px;
+            }
+            .cl-descricao{
+                width: 180px;
+            }
+            .cl-ref{
+                width: 100px;  
+            }
+            .cl-qte{
+                width: 50px;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <h1>Css - Exercicio 1</h1>
+        <table class="cl-table1">
+            <tr class="cl-cabecalho">
+                <th>Descrição do Pedido</th>
+            </tr>
+        </table>
+        <table class="cl-table2">
+        <tr class="cl-cabecalho cl-tr">
+            <th class="cl-ref">Ref.</th>
+            <th class="cl-descricao">Descrição do Produto</th>
+            <th class="cl-qte">Qtde </th>
+            <th>Valor Unitário</th>
+            <th>Total</th>    
+        </tr>
+        <tr class="cl-tr cl-tr-cor cl-troca-cor">
+            <td class="cl-alinha-centro">AZ001</td>
+            <td>Arroz Branco</td>
+            <td class="cl-alinha-centro">5</td>
+            <td class="cl-alinha-direita cl-td">10,00</td>
+            <td class="cl-alinha-direita cl-td">50,00</td>
+        </tr>
+        <tr class="cl-tr cl-troca-cor">
+            <td class="cl-alinha-centro">FJ002</td>
+            <td>Feijão Preto</td>
+            <td class="cl-alinha-centro">10</td>
+            <td class="cl-alinha-direita">12,00</td>
+            <td class="cl-alinha-direita">120,00</td>
+        </tr>
+        <tr class="cl-tr cl-tr-cor cl-troca-cor">
+            <td class="cl-alinha-centro ">FA005</td>
+            <td>Farinha de Milho</td>
+            <td class="cl-alinha-centro">50</td>
+            <td class="cl-alinha-direita">2,00</td>
+            <td class="cl-alinha-direita">100,00</td>
+        </tr>
+        <tr class="cl-troca-cor">
+            <td class="cl-alinha-centro">FJ003</td>
+            <td>Feijão Carioca (Comum)</td>
+            <td class="cl-alinha-centro">20</td>
+            <td class="cl-alinha-direita">10,00</td>
+            <td class="cl-alinha-direita">200,00</td>
+        </tr>
+
+        </table>    
+    </body>
+</html>

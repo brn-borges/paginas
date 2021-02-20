@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Introdução JavaScript</title>
+        <style>
+            .cl-dv-entrada, .cl-dv-saida{
+                width: 30%;
+                margin-left: 33%;
+                border: 1px solid red;
+                padding-top: 15px;
+                padding-bottom: 10px;
+                margin-top: 10px;
+            }
+            .cl-dv-caixas{
+                padding-left: 20px;
+            }
+            .cl-dv-saida{
+                height: 210px;
+            }
+            .cl-dv-operacoes{
+                width: 90%;
+                margin-left: 5%;
+                padding-top: 10px;
+                padding-bottom: 15px;
+                text-align: center;
+                border: 1px solid green;
+                color: blue;
+                font-weight: bold; 
+            }
+        </style>
+        <script>
+            function calcular(){
+                var V1; 
+                V1 = document.getElementById("txtV1");
+                var n1=0; var i=0; var r="";
+                n1 = parseInt(V1.value); 
+                for (i=1; i<=10; i++){
+                  r += n1 +" x " + i + " = " + n1*i + "<br />"; 
+                  document.getElementById("resultado").innerHTML = (r);
+               } 
+            }
+        </script>
+    </head>
+    <body>
+        <h1>JavaScript - Tabuada em JavaScript</h1>
+        <div class="cl-dv-entrada">
+            <div class="cl-dv-caixas">
+                <p>Valor: <input type="text"  id="txtV1"/></p>
+                <button onclick="calcular()">Calcular</button>
+            </div>
+        </div>
+        <div class="cl-dv-saida">
+            <div id="resultado" class="cl-dv-operacoes">
+                Resultado
+            </div>
+        </div>
+
+    </body>
+</html

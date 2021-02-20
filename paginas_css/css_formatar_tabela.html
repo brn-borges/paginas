@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Introdução CSS</title>
+
+        <style>
+            table{
+               border: 2px solid blue;
+               width: 50%; 
+               border-collapse: collapse;
+               margin-left: 25%;
+            }
+            td, th{
+                border-bottom: 1px solid blue; /* */
+                padding: 5px;
+            }
+            tr{
+                height: 30px;
+            }
+
+            .cl-cabecalho{
+                background-color: blueviolet;
+                color: white;
+                height: 40px;
+            }
+            .cl-alinha-direita{
+                text-align: right;
+            }
+            .cl-alinha-centro{
+                text-align: center;
+            }
+            .cl-troca-cor:hover{
+                background-color: #E6E6FA;
+                color: darkblue;
+                cursor: pointer;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <h1>Css - Formatar Tabela e Formulários</h1>
+        
+        <table>
+            <tr class="cl-cabecalho">
+                <th>Código</th>
+                <th>Produto</th>
+                <th>Qtde</th>
+                <th>Valor Unitário</th>
+                <th>Total</th>
+            </tr>
+            <tr class="cl-troca-cor">
+                <td class="cl-alinha-centro">001</td>
+                <td>Processador Intel Core I5</td>
+                <td class="cl-alinha-centro">2</td>
+                <td class="cl-alinha-direita">800,00</td>
+                <td class="cl-alinha-direita">1.600,00</td>
+            </tr>
+            <tr class="cl-troca-cor">
+                <td class="cl-alinha-centro">002</td>
+                <td>Placa-Mãe ASUS M-840</td>
+                <td class="cl-alinha-centro">1</td>
+                <td class="cl-alinha-direita">500,00</td>
+                <td class="cl-alinha-direita">500,00</td>
+            </tr>
+            <tr class="cl-troca-cor"> 
+                <td class="cl-alinha-centro">003</td>
+                <td>Memória Ram DDR4 2400 Mhz 8GB</td>
+                <td class="cl-alinha-centro">2</td>
+                <td class="cl-alinha-direita">300,00</td>
+                <td class="cl-alinha-direita">600,00</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="cl-alinha-direita">Total a pagar:</td>
+                <td class="cl-alinha-direita">2.700,00</td>
+            </tr>
+        </table>
+
+        
+    </body>
+</html>

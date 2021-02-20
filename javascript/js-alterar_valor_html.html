@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Introdução JavaScript</title>
+        <style>
+            .cl-dv-entrada, .cl-dv-saida{
+                width: 80%;
+                margin-left: 10%;
+                border: 1px solid red;
+                padding-top: 15px;
+                padding-bottom: 10px;
+                margin-top: 10px;
+            }
+            .cl-dv-caixas{
+                padding-left: 20px;
+            }
+            .cl-dv-saida{
+                height: 150px;
+            }
+            .cl-dv-operacoes{
+                width: 20%;
+                margin-left: 3.5%;
+                padding-top: 10px;
+                padding-bottom: 15px;
+                text-align: center;
+                border: 1px solid green;
+                color: blue;
+                font-weight: bold;
+                display: inline-block;
+            }
+        </style>
+        <script>
+            function calcular(){
+                var V1; var V2;
+                V1 = document.getElementById("txtV1");
+                V2 = document.getElementById("txtV2");
+                var n1=0; var n2=0;
+                n1 = parseInt(V1.value);
+                n2 = parseInt(V2.value);
+
+                document.getElementById("soma").innerHTML = (n1+n2)
+                document.getElementById("sub").innerHTML = (n1-n2)
+                document.getElementById("multi").innerHTML = (n1*n2)
+                document.getElementById("divi").innerHTML = (n1/n2)
+            }
+
+        </script>
+    </head>
+    <body>
+        <h1>JavaScript - Alterar valor html</h1>
+        <div class="cl-dv-entrada">
+            <div class="cl-dv-caixas">
+                <p>Valor 1: <input type="text"  id="txtV1"/></p>
+                <p>Valor 2: <input type="text"  id="txtV2"/></p>
+                <button onclick="calcular()">Calcular</button>
+            </div>
+        </div>
+        <div class="cl-dv-saida">
+            <div id="soma" class="cl-dv-operacoes">
+                Soma
+            </div>
+            <div id="sub"class="cl-dv-operacoes">
+                Subtração
+            </div>
+            <div id="multi" class="cl-dv-operacoes">
+                Multiplicação
+            </div>
+            <div id="divi" class="cl-dv-operacoes">
+                Divisão
+            </div>
+        </div>
+
+    </body>
+</html

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Introdução JQuery</title>
+        <script src="./script/jquery-3.5.1.min.js"></script>
+        <style>
+           p{
+               color: blue;
+               font-size: 20px;
+               width: 10%;
+               border: 1px solid yellow;
+               cursor: pointer;
+               text-align: center;
+               margin-left: 1%;
+               display:inline-block;
+
+           }
+           p:hover{
+               background-color: teal;
+               color: white;
+           }
+           #dv-dois{
+               width: 30%;
+               height: 300px;
+               margin-left: 35%;
+               margin-top: 10%;
+               border: 1px solid red;
+               background-color: tomato;
+           }
+        </style>
+        <script>
+            $(document).ready(function(){
+                $("#p1").click(function(){
+                    $("#dv-dois").fadeOut(3000);
+                });
+                $("#p2").click(function(){
+                    $("#dv-dois").fadeTo(3000,0.2);
+                });
+                $("#p3").click(function(){
+                    $("#dv-dois").slideUp(3000);
+                });
+                $("#p4").click(function(){
+                    $("#dv-dois").slideDown(3000);
+                });
+                $("#p5").click(function(){
+                    $("#dv-dois").fadeIn(3000);
+                });
+                $("#p6").click(function(){
+                    $("#dv-dois").animate({"width" : "5%",
+                                           "height" : "40px",
+                                           "margin-left" : "1%"
+                    },3000, function(){
+                        $("#dv-dois").animate({"width" : "30%",
+                                           "height" : "300px",
+                                           "margin-left" : "35%"
+                    },3000);
+                    });
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <h1>JQuery - Animações</h1>
+        <hr />
+        <div>
+            <p id="p1">FadeOut</p>
+            <p id="p2">FadeTo</p>
+            <p id="p3">SlideUp</p>
+            <p id="p4">SlideDown</p>
+            <p id="p5">FadeIn</p>
+            <p id="p6">Animate</p>
+        </div>
+        <div id="dv-dois">
+            Div Dois
+        </div>
+    </body>
+</html

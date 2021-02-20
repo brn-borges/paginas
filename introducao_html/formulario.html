@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Formulário</title>
+    </head>
+    <body>
+        <center>
+            <font color="blue" size="5">
+                <h1>Elemento de um formulário</h1>
+            </font>
+        </center>
+        <hr />
+       
+        <fieldset>
+            <legend>Dados pessoais</legend>
+            <form>
+                <h5>Nome:</h5>
+                <input input type="text" name="txtNome"/>
+                <h5>Telefone:</h5>
+                <input input type="text" name="txtTelefone"/>
+                <h5>Estado:</h5>
+                <select name="cmbEstado" >
+                    <option></option>
+                    <option>São Paulo</option>
+                    <option>Minas Gerais</option>
+                    <option>Rio Grande do Sul</option>
+                    <option>Rio de Janeiro</option>
+                </select>
+                <h5>É maior de idade?</h5>
+                <b>Sim</b> <input type="radio" name="optSimNao" value="SIM"/>
+                <b>Não</b> <input type="radio" name="optSimNao" value="NAO"/>
+                <h5>Melhor periodo para entrar em contato:</h5>
+                <b>Manhã</b> <input type="checkbox" name="chkManha" />
+                <b>Tarde</b> <input type="checkbox" name="chkTarde" />
+                <b>Noite</b> <input type="checkbox" name="chkNoite" />
+                <h5>Observações</h5>
+                    <textarea name="txtObs" rows="10" cols="100">
+                    </textarea>
+                <h5>Enviar os dados fornecidos:</h5>
+                <input type="submit" name="enviar" value="Enviar" />
+                
+            </form>
+
+        </fieldset>
+
+        <a href="menu.html">
+            <img src="imagens/setaVolta.jpg" width="50" height="50">
+            </img>
+        </a>
+    </body>
+</html>
