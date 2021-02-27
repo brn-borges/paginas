@@ -59,19 +59,27 @@
                $("#mostrarCaixa").click(function(){
                     $("#geral").css({ "display" : "block"});
                     $("#geral").animate({ "opacity" : "0.6"}, 2000, function(){
-                        $("#caixa").fadeIn(2000);
+                        $("#caixa").fadeIn(2000, function(){
+                            executar(1);
+                        });
+                        
                     });
                });
                $("#fechar").click(function(){
+                    executar(0);
                     $("#caixa").fadeOut(1500);
                     $("#geral").animate({ "opacity" : "0"}, 2000, function(){
                         $("#geral").css({ "display" : "none"});
                     });
                });
             });
-            function executar(){
+            function executar(p){
                 var vd = document.getElementById("v_video");
-                
+                if( p == 1){
+                    vd.play();
+                }else {
+                    vd.pause();
+                }
             }
         </script>
     </head>
